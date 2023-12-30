@@ -1,4 +1,4 @@
-#!/home/bmernax30/Documents/hotshots/hs_env/bin/python
+#!/home/bmernax30/Documents/hs_rest/hs_env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

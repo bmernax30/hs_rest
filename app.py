@@ -8,6 +8,7 @@ app.add_api(config.basedir / "swagger.yml")
 @app.route("/")
 def home():
 	games = Game.query.all()
+	print(games)
 	return render_template("home.html", games=games)
 
 

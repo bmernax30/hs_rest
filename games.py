@@ -30,7 +30,13 @@ def update(courtname, game):
     existing_game = Game.query.filter(Game.courtname == courtname).one_or_none()
     if existing_game:
         update_game = game_schema.load(game, session=db.session)
-        existing_game.password = update_game.password
+        existing_game.courtname = update_game.courtname
+        existing_game.team1 = update_game.team1
+        existing_game.team2 = update_game.team2
+        existing_game.score1 = update_game.score1
+        existing_game.score2 = update_game.score2
+        existing_game.gamenum = update_game.gamenum
+
         db.session.merge(existing_game)
         db.session.commit()
         return game_schema.dump(existing_game), 201
