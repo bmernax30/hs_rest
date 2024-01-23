@@ -9,65 +9,33 @@
 </script>
 <style>
     table, th, td {
-        border:1px solid black;
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
     }
 </style>
 <head>
     <meta charset="UTF-8">
-    <title>RP Flask REST API</title>
+    <title>Hotshots Courts</title>
 </head>
 <body>
     <h1>
         Hotshots Live Scores
     </h1>
-    <table style="width:100%">
-        <tr>
-          <th>Court</th>
-          <th>Team 1</th>
-          <th>Team 2</th>
-          <th>Game Num</th>
-          <th>Score 1</th>
-          <th>Score 2</th>
+    <font size="7" face="Courier New" >
+    <table style="width:50%">
+        <tr rowpan="2">
+          <th colspan="5">COURT {{games[0].courtname}}</th>
         </tr>
         <tr>
-            <th>{{games[0].courtname}}</th>
-            <th>{{games[0].team1}}</th>
-            <th>{{games[0].team2}}</th>
-            <th>{{games[0].gamenum}}</th>
-            <th>{{games[0].score1}}</th>
-            <th>{{games[0].score2}}</th>
+          <td colspan="2" bgcolor="#FEC1C1">{{games[0].team1}}</td>
+          <td colspan="2" bgcolor="#A3D5FF">{{games[0].team2}}</td>
+          <td>GAME</td>
         </tr>
-        <tr>
-            <th>{{games[1].courtname}}</th>
-            <th>{{games[1].team1}}</th>
-            <th>{{games[1].team2}}</th>
-            <th>{{games[1].gamenum}}</th>
-            <th>{{games[1].score1}}</th>
-            <th>{{games[1].score2}}</th>
-        </tr>
-        <tr>
-            <th>{{games[2].courtname}}</th>
-            <th>{{games[2].team1}}</th>
-            <th>{{games[2].team2}}</th>
-            <th>{{games[2].gamenum}}</th>
-            <th>{{games[2].score1}}</th>
-            <th>{{games[2].score2}}</th>
-        </tr>
-        <tr>
-            <th>{{games[3].courtname}}</th>
-            <th>{{games[3].team1}}</th>
-            <th>{{games[3].team2}}</th>
-            <th>{{games[3].gamenum}}</th>
-            <th>{{games[3].score1}}</th>
-            <th>{{games[3].score2}}</th>
-        </tr>
-        <tr>
-            <th>{{games[4].courtname}}</th>
-            <th>{{games[4].team1}}</th>
-            <th>{{games[4].team2}}</th>
-            <th>{{games[4].gamenum}}</th>
-            <th>{{games[4].score1}}</th>
-            <th>{{games[4].score2}}</th>
+        <tr rowspan="2">
+          <td colspan="2" textcolor="blue">{{games[0].score1}}</td>
+          <td colspan="2" textcolor="red">{{games[0].score2}}</td>
+          <td>{{games[0].gamenum}}</td>
         </tr>
       </table>
 </body>

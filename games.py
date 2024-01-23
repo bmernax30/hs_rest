@@ -11,7 +11,7 @@ def create(game):
     courtname = game.get("courtname")
     existing_game = Game.query.filter(Game.courtname == courtname).one_or_none()
 
-    if existing_game is NONE:
+    if existing_game is None:
         new_game = game_schema.load(game, session=db.session)
         db.session.add(new_game)
         db.session.commit()
